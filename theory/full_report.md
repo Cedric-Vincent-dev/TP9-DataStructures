@@ -54,10 +54,10 @@
 
 
 
-```markdown
-# TP9 - Structures de données
+```
+TP9 - Structures de données
 
-## STRUCTURES DE BASE
+STRUCTURES DE BASE
 
 **Tableau (Array)**
 - **Définition** : Structure contiguë qui stocke des éléments de même type dans une mémoire fixe.
