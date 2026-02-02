@@ -59,7 +59,7 @@
 
 ## STRUCTURES DE BASE
 
-### Tableau (Array)
+**Tableau (Array)**
 - **Définition** : Structure contiguë qui stocke des éléments de même type dans une mémoire fixe.
 - **Cas d’utilisation** : Accès direct par index, données de taille connue.
 - **Pseudo-algorithme** :
@@ -67,7 +67,7 @@
   array[i] -> accès en O(1)
   ```
 
-### Tableau dynamique (Dynamic Array / Vector)
+**Tableau dynamique (Dynamic Array / Vector)**
 - **Définition** : Tableau extensible qui redimensionne automatiquement sa capacité.
 - **Cas d’utilisation** : Collections dont la taille varie.
 - **Pseudo-algorithme** :
@@ -77,7 +77,7 @@
       array[size++] = x
   ```
 
-### Chaîne de caractères (String)
+**Chaîne de caractères (String)**
 - **Définition** : Tableau de caractères terminé par '\0' (en C).
 - **Cas d’utilisation** : Manipulation de texte.
 - **Pseudo-algorithme** :
@@ -88,11 +88,11 @@
           count++
   ```
 
----
 
-## LISTES CHAÎNÉES
 
-### Liste simplement chaînée (Linked List)
+**LISTES CHAÎNÉES**
+
+**Liste simplement chaînée (Linked List)**
 - **Définition** : Suite de nœuds reliés par pointeurs, chaque nœud pointe vers le suivant.
 - **Cas d’utilisation** : Insertion/suppression fréquente.
 - **Pseudo-algorithme** :
@@ -103,7 +103,7 @@
       head = newNode
   ```
 
-### Liste doublement chaînée (Double Linked List)
+**Liste doublement chaînée (Double Linked List)**
 - **Définition** : Chaque nœud pointe vers le suivant et le précédent.
 - **Cas d’utilisation** : Parcours bidirectionnel.
 - **Pseudo-algorithme** :
@@ -113,7 +113,7 @@
       node.next.prev = node.prev
   ```
 
-### Liste circulaire (Circular Linked List)
+**Liste circulaire (Circular Linked List)**
 - **Définition** : Le dernier nœud pointe vers le premier.
 - **Cas d’utilisation** : Buffers circulaires, gestion cyclique.
 - **Pseudo-algorithme** :
@@ -126,11 +126,11 @@
       while node != head
   ```
 
----
 
-## PILES ET FILES
 
-### Pile (Stack)
+**PILES ET FILES**
+
+**Pile (Stack)**
 - **Définition** : Structure LIFO (Last In, First Out).
 - **Cas d’utilisation** : Undo/Redo, récursivité.
 - **Pseudo-algorithme** :
@@ -139,7 +139,7 @@
   pop(): return stack[top--]
   ```
 
-### File (Queue)
+**File (Queue)**
 - **Définition** : Structure FIFO (First In, First Out).
 - **Cas d’utilisation** : Files d’attente, scheduling.
 - **Pseudo-algorithme** :
@@ -148,7 +148,7 @@
   dequeue(): return queue[front++]
   ```
 
-### File double (Deque)
+**File double (Deque)**
 - **Définition** : File où l’on peut insérer/supprimer aux deux extrémités.
 - **Cas d’utilisation** : Algorithmes glissants, caches.
 - **Pseudo-algorithme** :
@@ -157,7 +157,7 @@
   popFront(), popBack()
   ```
 
-### File de priorité (Priority Queue)
+**File de priorité (Priority Queue)**
 - **Définition** : File où chaque élément a une priorité.
 - **Cas d’utilisation** : Planification, Dijkstra.
 - **Pseudo-algorithme** :
@@ -166,11 +166,11 @@
   extractMin(): heapExtract()
   ```
 
----
 
-## ARBRES
 
-### Arbre binaire (Binary Tree)
+**ARBRES**
+
+**Arbre binaire (Binary Tree)**
 - **Définition** : Chaque nœud a au plus deux enfants.
 - **Cas d’utilisation** : Hiérarchies, expressions.
 - **Pseudo-algorithme** :
@@ -182,7 +182,7 @@
           traverseInOrder(node.right)
   ```
 
-### Arbre binaire de recherche (BST)
+**Arbre binaire de recherche (BST)**
 - **Définition** : Arbre binaire ordonné (gauche < racine < droite).
 - **Cas d’utilisation** : Recherche rapide.
 - **Pseudo-algorithme** :
@@ -194,7 +194,7 @@
       else: return search(node.right, x)
   ```
 
-### Arbre AVL
+**Arbre AVL**
 - **Définition** : BST auto-équilibré par rotations.
 - **Cas d’utilisation** : Recherche équilibrée.
 - **Pseudo-algorithme** :
@@ -205,7 +205,7 @@
       if |balance| > 1 -> rotation
   ```
 
-### Arbre Rouge-Noir (Red-Black Tree)
+**Arbre Rouge-Noir (Red-Black Tree)**
 - **Définition** : BST équilibré avec règles de couleur.
 - **Cas d’utilisation** : Maps, sets en STL.
 - **Pseudo-algorithme** :
@@ -215,7 +215,7 @@
       recolor/rotate to maintain rules
   ```
 
-### Arbre B / B+ Tree
+**Arbre B / B+ Tree**
 - **Définition** : Arbre multi-branches utilisé en bases de données.
 - **Cas d’utilisation** : Indexation disque.
 - **Pseudo-algorithme** :
@@ -226,7 +226,7 @@
       if overflow -> split
   ```
 
-### Tas binaire (Binary Heap)
+**Tas binaire (Binary Heap)**
 - **Définition** : Arbre binaire complet avec propriété de tas.
 - **Cas d’utilisation** : HeapSort, Priority Queue.
 - **Pseudo-algorithme** :
@@ -237,7 +237,7 @@
       recurse
   ```
 
-### Trie (Prefix Tree)
+**Trie (Prefix Tree)**
 - **Définition** : Arbre pour stocker des chaînes par préfixes.
 - **Cas d’utilisation** : Recherche de mots, auto-complétion.
 - **Pseudo-algorithme** :
@@ -250,7 +250,7 @@
           node = node.child[c]
   ```
 
-### Arbre de segments (Segment Tree)
+**Arbre de segments (Segment Tree)**
 - **Définition** : Arbre pour gérer des intervalles.
 - **Cas d’utilisation** : Somme/min/max sur plages.
 - **Pseudo-algorithme** :
@@ -264,11 +264,11 @@
           tree[node] = merge(children)
   ```
 
----
 
-## ENSEMBLES ET DICTIONNAIRES
 
-### Ensemble (Set)
+**ENSEMBLES ET DICTIONNAIRES**
+
+**Ensemble (Set)**
 - **Définition** : Collection sans doublons.
 - **Cas d’utilisation** : Vérifier appartenance.
 - **Pseudo-algorithme** :
@@ -276,7 +276,7 @@
   insert(x): if not in set -> add
   ```
 
-### Ensemble non ordonné (Unordered Set)
+**Ensemble non ordonné (Unordered Set)**
 - **Définition** : Set basé sur hachage.
 - **Cas d’utilisation** : Recherche O(1).
 - **Pseudo-algorithme** :
@@ -285,7 +285,7 @@
   bucket[index].add(x)
   ```
 
-### Multi-ensemble (Multiset)
+**Multi-ensemble (Multiset)**
 - **Définition** : Ensemble avec doublons autorisés.
 - **Cas d’utilisation** : Comptage d’éléments.
 - **Pseudo-algorithme** :
@@ -293,7 +293,7 @@
   insert(x): count[x]++
   ```
 
-### Dictionnaire / Map
+**Dictionnaire / Map**
 - **Définition** : Associe clé → valeur.
 - **Cas d’utilisation** : Carnet d’adresses.
 - **Pseudo-algorithme** :
@@ -301,7 +301,7 @@
   insert(key, value): table[key] = value
   ```
 
-### Table de hachage (Hash Table / Unordered Map)
+**Table de hachage (Hash Table / Unordered Map)**
 - **Définition** : Map basée sur fonction de hachage.
 - **Cas d’utilisation** : Recherche rapide.
 - **Pseudo-algorithme** :
@@ -310,7 +310,7 @@
   table[index] = value
   ```
 
-### Multi-map
+**Multi-map**
 - **Définition** : Map où une clé peut avoir plusieurs valeurs.
 - **Cas d’utilisation** : Index inversé.
 - **Pseudo-algorithme** :
@@ -318,11 +318,11 @@
   insert(key, value): list[key].append(value)
   ```
 
----
 
-## GRAPHES
 
-### Matrice d’adjacence (Adjacency Matrix)
+**GRAPHES**
+
+**Matrice d’adjacence (Adjacency Matrix)**
 - **Définition** : Matrice NxN indiquant les arêtes.
 - **Cas d’utilisation** : Graphes denses.
 - **Pseudo-algorithme** :
@@ -330,7 +330,7 @@
   matrix[u][v] = 1
   ```
 
-### Liste d’adjacence (Adjacency List)
+**Liste d’adjacence (Adjacency List)**
 - **Définition** : Chaque sommet a une liste de voisins.
 - **Cas d’utilisation** : Graphes clairsemés.
 - **Pseudo-algorithme** :
