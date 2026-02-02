@@ -338,3 +338,190 @@ Liste d’adjacence (Adjacency List)
 
 
 
+```
+GRAPHES
+
+Matrice d’adjacence (Adjacency Matrix)
+- Définition : Matrice NxN où chaque case indique la présence ou non d’une arête entre deux sommets.
+- Cas d’utilisation : Graphes denses, calculs rapides de voisinage.
+- Pseudo-algorithme :
+  ```
+  addEdge(u, v):
+      matrix[u][v] = 1
+      matrix[v][u] = 1   // si graphe non orienté
+  ```
+
+Liste d’adjacence (Adjacency List)
+- Définition : Chaque sommet possède une liste de ses voisins.
+- Cas d’utilisation : Graphes clairsemés, stockage efficace.
+- Pseudo-algorithme :
+  ```
+  addEdge(u, v):
+      list[u].append(v)
+      list[v].append(u)
+  ```
+
+Matrice d’incidence (Incidence Matrix)
+- Définition : Matrice sommets × arêtes, chaque colonne représente une arête et indique les sommets reliés.
+- Cas d’utilisation : Algèbre des graphes, calculs matriciels.
+- Pseudo-algorithme :
+  ```
+  addEdge(e, u, v):
+      matrix[u][e] = 1
+      matrix[v][e] = 1
+  ```
+
+
+
+STRUCTURES AVANCÉES
+
+Union-Find (Disjoint Set)
+- Définition : Structure qui gère des ensembles disjoints avec opérations `find` et `union`.
+- Cas d’utilisation : Détection de cycles, algorithmes de graphes (Kruskal).
+- Pseudo-algorithme :
+  ```
+  find(x):
+      if parent[x] != x:
+          parent[x] = find(parent[x])
+      return parent[x]
+
+  union(x, y):
+      rootX = find(x)
+      rootY = find(y)
+      parent[rootX] = rootY
+  ```
+
+Bloom Filter
+- Définition : Structure probabiliste pour tester l’appartenance avec risque de faux positifs.
+- Cas d’utilisation : Filtrage rapide (ex. anti-spam).
+- Pseudo-algorithme :
+  ```
+  insert(x):
+      for each hash h:
+          bitArray[h(x)] = 1
+
+  query(x):
+      return all(bitArray[h(x)] == 1)
+  ```
+
+Skip List
+- Définition : Liste chaînée multi-niveaux permettant recherche rapide.
+- Cas d’utilisation : Alternative aux arbres équilibrés.
+- Pseudo-algorithme :
+  ```
+  search(x):
+      start at top level
+      while current.next < x:
+          move right
+      move down
+  ```
+
+Arbre de Fenwick (Binary Indexed Tree)
+- Définition : Structure pour calculer des sommes cumulées efficacement.
+- Cas d’utilisation : Sommes de préfixes, algorithmes de compétitions.
+- Pseudo-algorithme :
+  ```
+  update(i, delta):
+      while i <= n:
+          tree[i] += delta
+          i += i & -i
+
+  query(i):
+      sum = 0
+      while i > 0:
+          sum += tree[i]
+          i -= i & -i
+      return sum
+  ```
+
+Sparse Table
+- Définition : Structure pour répondre à des requêtes sur intervalles (min, max) en O(1).
+- Cas d’utilisation : Problèmes de RMQ (Range Minimum Query).
+- Pseudo-algorithme :
+  ```
+  build(arr):
+      for i in 0..n:
+          table[i][0] = arr[i]
+      for j in 1..log(n):
+          for i in 0..n-(1<<j):
+              table[i][j] = min(table[i][j-1], table[i+(1<<(j-1))][j-1])
+  ```
+
+Quadtree / Octree
+- Définition : Arbres utilisés pour partitionner l’espace (2D pour Quadtree, 3D pour Octree).
+- Cas d’utilisation : Graphismes, spatial indexing.
+- Pseudo-algorithme :
+  ```
+  insert(node, point):
+      if node is leaf and capacity not full:
+          add point
+      else:
+          subdivide node
+          insert into correct child
+  ```
+
+Rope
+- Définition : Structure pour manipuler efficacement de longues chaînes de caractères.
+- Cas d’utilisation : Éditeurs de texte, concaténations rapides.
+- Pseudo-algorithme :
+  ```
+  concat(ropeA, ropeB):
+      return new Rope(nodeA, nodeB)
+  ```
+
+
+
+STRUCTURES SPÉCIALISÉES
+
+Bitset
+- Définition : Tableau compact de bits.
+- Cas d’utilisation : Stockage efficace de booléens, masques.
+- Pseudo-algorithme :
+  ```
+  setBit(i): bits[i/word] |= (1 << (i % word))
+  ```
+
+Matrice creuse (Sparse Matrix)
+- Définition : Matrice avec peu d’éléments non nuls, stockée sous forme compressée.
+- Cas d’utilisation : Calcul scientifique, graphes.
+- Pseudo-algorithme :
+  ```
+  store(row, col, value):
+      if value != 0:
+          entries.append((row, col, value))
+  ```
+
+Circular Buffer (Ring Buffer)
+- Définition : Buffer circulaire où les indices se réinitialisent.
+- Cas d’utilisation : Streaming, files fixes.
+- Pseudo-algorithme :
+  ```
+  enqueue(x):
+      buffer[rear] = x
+      rear = (rear+1) % size
+  ```
+
+Cache LRU (Least Recently Used)
+- Définition : Cache qui évince l’élément le moins récemment utilisé.
+- Cas d’utilisation : Optimisation mémoire, systèmes.
+- Pseudo-algorithme :
+  ```
+  access(key):
+      if key in cache:
+          move to front
+      else:
+          if cache full:
+              remove least recently used
+          insert key
+  ```
+
+
+
+Conclusion
+Ce rapport couvre toutes les structures de données classiques et avancées : des tableaux aux graphes, en passant par les arbres équilibrés, les structures probabilistes et spécialisées.  
+Chaque structure est définie, accompagnée de ses cas d’utilisation et d’un pseudo‑algorithme sommaire.  
+La partie pratique du TP9 consistera à implémenter en C/C++ avec pointeurs : liste chaînée, liste doublement chaînée, heap, queue, dictionnaire et arbre binaire, avec tests unitaires.
+```
+
+
+
