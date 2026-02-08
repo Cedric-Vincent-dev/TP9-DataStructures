@@ -1,0 +1,27 @@
+#include "linked_list.h"
+#include <gtest/gtest.h>
+
+
+TEST(LinkedListTest, InsertOneElement) {
+  LinkedList list;
+  init_list(&list);
+  einsert(&list, 42);
+  ASSERT_NE(list.head, nullptr);
+  EXPECT_EQ(list.head->value, 42);
+  clear_list(&list);
+
+}
+
+TEST(LinkedListTest, InsertMultipleElements) {
+  LinkedList list;
+  init_list(&list);
+  insert(&list, 1);
+  insert(&list, 2);
+  insert(&list, 3);
+  ASSERT_NE(list.head, nullptr);
+  EXPECT_EQ(list.head->value, 3);
+  EXPECT_EQ(list.head->next->value, 2);
+  EXPECT_EQ(list.head->next->next->value, 1);
+  clear_list(&list);
+
+}

@@ -1,0 +1,31 @@
+Start testing: Feb 08 18:18 CET
+----------------------------------------------------------
+1/1 Testing: LinkedListTests
+1/1 Test: LinkedListTests
+Command: "/home/thekoder/TP9-DataStructures/build/tests/runTests"
+Directory: /home/thekoder/TP9-DataStructures/build/tests
+"LinkedListTests" start time: Feb 08 18:18 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from LinkedListTest
+[ RUN      ] LinkedListTest.InsertOneElement
+[       OK ] LinkedListTest.InsertOneElement (0 ms)
+[ RUN      ] LinkedListTest.InsertMultipleElements
+[       OK ] LinkedListTest.InsertMultipleElements (0 ms)
+[----------] 2 tests from LinkedListTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LinkedListTests" end time: Feb 08 18:18 CET
+"LinkedListTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 08 18:18 CET
