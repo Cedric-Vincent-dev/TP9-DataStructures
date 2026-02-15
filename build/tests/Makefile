@@ -140,6 +140,20 @@ runTests/fast:
 	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
 .PHONY : runTests/fast
 
+# Convenience name for target.
+tests/CMakeFiles/runStackTests.dir/rule:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runStackTests.dir/rule
+.PHONY : tests/CMakeFiles/runStackTests.dir/rule
+
+# Convenience name for target.
+runStackTests: tests/CMakeFiles/runStackTests.dir/rule
+.PHONY : runStackTests
+
+# fast build rule for target.
+runStackTests/fast:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/build
+.PHONY : runStackTests/fast
+
 linked_list_test.o: linked_list_test.cpp.o
 .PHONY : linked_list_test.o
 
@@ -164,6 +178,30 @@ linked_list_test.cpp.s:
 	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/linked_list_test.cpp.s
 .PHONY : linked_list_test.cpp.s
 
+stack_test.o: stack_test.cpp.o
+.PHONY : stack_test.o
+
+# target to build an object file
+stack_test.cpp.o:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/stack_test.cpp.o
+.PHONY : stack_test.cpp.o
+
+stack_test.i: stack_test.cpp.i
+.PHONY : stack_test.i
+
+# target to preprocess a source file
+stack_test.cpp.i:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/stack_test.cpp.i
+.PHONY : stack_test.cpp.i
+
+stack_test.s: stack_test.cpp.s
+.PHONY : stack_test.s
+
+# target to generate assembly for a file
+stack_test.cpp.s:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/stack_test.cpp.s
+.PHONY : stack_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -173,10 +211,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... runStackTests"
 	@echo "... runTests"
 	@echo "... linked_list_test.o"
 	@echo "... linked_list_test.i"
 	@echo "... linked_list_test.s"
+	@echo "... stack_test.o"
+	@echo "... stack_test.i"
+	@echo "... stack_test.s"
 .PHONY : help
 
 

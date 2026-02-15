@@ -97,6 +97,7 @@ tp9: CMakeFiles/tp9.dir/src/main.cpp.o
 tp9: CMakeFiles/tp9.dir/build.make
 tp9: CMakeFiles/tp9.dir/compiler_depend.ts
 tp9: liblinked_list.a
+tp9: libstack.a
 tp9: CMakeFiles/tp9.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tp9"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tp9.dir/link.txt --verbose=$(VERBOSE)

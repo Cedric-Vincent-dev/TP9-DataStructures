@@ -1,0 +1,30 @@
+#ifndef STACK_H
+#define STACK_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+  typedef struct StackNode {
+    int value;
+    struct StackNode* next;
+
+  } StackNode;
+
+
+  typedef struct Stack {
+    StackNode* top;
+
+  } Stack;
+
+  void init_stack(Stack* stack);
+  void push(Stack* stack, int value);
+  int pop(Stack* stack);
+  int is_empty(Stack* stack);
+  void clear_stack(Stack* stack);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

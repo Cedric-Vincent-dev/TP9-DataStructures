@@ -140,6 +140,19 @@ linked_list/fast:
 .PHONY : linked_list/fast
 
 #=============================================================================
+# Target rules for targets named stack
+
+# Build rule for target.
+stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack
+.PHONY : stack
+
+# fast build rule for target.
+stack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/build
+.PHONY : stack/fast
+
+#=============================================================================
 # Target rules for targets named tp9
 
 # Build rule for target.
@@ -164,6 +177,19 @@ runTests: cmake_check_build_system
 runTests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
 .PHONY : runTests/fast
+
+#=============================================================================
+# Target rules for targets named runStackTests
+
+# Build rule for target.
+runStackTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runStackTests
+.PHONY : runStackTests
+
+# fast build rule for target.
+runStackTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/build
+.PHONY : runStackTests/fast
 
 src/linked_list.o: src/linked_list.c.o
 .PHONY : src/linked_list.o
@@ -213,6 +239,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp9.dir/build.make CMakeFiles/tp9.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/stack.o: src/stack.c.o
+.PHONY : src/stack.o
+
+# target to build an object file
+src/stack.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/src/stack.c.o
+.PHONY : src/stack.c.o
+
+src/stack.i: src/stack.c.i
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/src/stack.c.i
+.PHONY : src/stack.c.i
+
+src/stack.s: src/stack.c.s
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/src/stack.c.s
+.PHONY : src/stack.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,7 +273,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... linked_list"
+	@echo "... runStackTests"
 	@echo "... runTests"
+	@echo "... stack"
 	@echo "... tp9"
 	@echo "... src/linked_list.o"
 	@echo "... src/linked_list.i"
@@ -231,6 +283,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/stack.o"
+	@echo "... src/stack.i"
+	@echo "... src/stack.s"
 .PHONY : help
 
 

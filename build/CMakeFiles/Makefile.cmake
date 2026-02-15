@@ -154,6 +154,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/linked_list.dir/DependInfo.cmake"
+  "CMakeFiles/stack.dir/DependInfo.cmake"
   "CMakeFiles/tp9.dir/DependInfo.cmake"
   "tests/CMakeFiles/runTests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/runStackTests.dir/DependInfo.cmake"
   )
