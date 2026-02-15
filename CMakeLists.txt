@@ -14,8 +14,11 @@ add_library(linked_list
 # Créer une bibliothèque pour la pile
 add_library(stack src/stack.c)
 
-# créer une bibliothèque pour la liste doublement chainée
+# Créer une bibliothèque pour la liste doublement chainée
 add_library(doubly_linked_list src/doubly_linked_list.c)
+
+# Créer une bibliothèque pour le heap
+add_library(heap src/heap.c)
 
 
 # Exécutable principal
@@ -25,7 +28,7 @@ add_executable(tp9
 )
 
 # Lier l'exécutable à la bibliothèque
-target_link_libraries(tp9 linked_list stack doubly_linked_list)
+target_link_libraries(tp9 linked_list stack doubly_linked_list heap)
 
 
 # Activer les tests

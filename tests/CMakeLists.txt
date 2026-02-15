@@ -27,3 +27,8 @@ add_test(NAME StackTests COMMAND runStackTests)
 add_executable(runDoublyListTests doubly_linked_list_test.cpp)
 target_link_libraries(runDoublyListTests GTest::GTest GTest::Main doubly_linked_list)
 add_test(NAME DoublyLinkedListTests COMMAND runDoublyListTests)
+
+# Test pour le Heap
+add_executable(runHeapTests heap_test.cpp)
+target_link_libraries(runHeapTests GTest::GTest GTest::Main heap)
+add_test(NAME HeapTests COMMAND runHeapTests)
