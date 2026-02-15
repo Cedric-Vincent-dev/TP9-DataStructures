@@ -32,3 +32,8 @@ add_test(NAME DoublyLinkedListTests COMMAND runDoublyListTests)
 add_executable(runHeapTests heap_test.cpp)
 target_link_libraries(runHeapTests GTest::GTest GTest::Main heap)
 add_test(NAME HeapTests COMMAND runHeapTests)
+
+# Test pour le Map
+add_executable(runMapTests map_test.cpp)
+target_link_libraries(runMapTests GTest::GTest GTest::Main map)
+add_test(NAME MapTests COMMAND runMapTests)

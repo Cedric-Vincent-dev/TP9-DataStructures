@@ -20,6 +20,8 @@ add_library(doubly_linked_list src/doubly_linked_list.c)
 # Créer une bibliothèque pour le heap
 add_library(heap src/heap.c)
 
+# créer une bibliothèque pour le map
+add_library(map src/map.c)
 
 # Exécutable principal
 add_executable(tp9
@@ -28,7 +30,7 @@ add_executable(tp9
 )
 
 # Lier l'exécutable à la bibliothèque
-target_link_libraries(tp9 linked_list stack doubly_linked_list heap)
+target_link_libraries(tp9 linked_list stack doubly_linked_list heap map)
 
 
 # Activer les tests
