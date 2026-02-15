@@ -37,3 +37,8 @@ add_test(NAME HeapTests COMMAND runHeapTests)
 add_executable(runMapTests map_test.cpp)
 target_link_libraries(runMapTests GTest::GTest GTest::Main map)
 add_test(NAME MapTests COMMAND runMapTests)
+
+# Test pour le Binary_tree
+add_executable(runBinaryTreeTests binary_tree_test.cpp)
+target_link_libraries(runBinaryTreeTests GTest::GTest GTest::Main binary_tree)
+add_test(NAME BinaryTreeTests COMMAND runBinaryTreeTests)
