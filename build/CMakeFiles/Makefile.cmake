@@ -155,7 +155,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/linked_list.dir/DependInfo.cmake"
   "CMakeFiles/stack.dir/DependInfo.cmake"
+  "CMakeFiles/doubly_linked_list.dir/DependInfo.cmake"
   "CMakeFiles/tp9.dir/DependInfo.cmake"
   "tests/CMakeFiles/runTests.dir/DependInfo.cmake"
   "tests/CMakeFiles/runStackTests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/runDoublyListTests.dir/DependInfo.cmake"
   )

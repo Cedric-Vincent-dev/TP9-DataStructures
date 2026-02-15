@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/thekoder/TP9-DataStructures/build
 # The main recursive "all" target.
 all: CMakeFiles/linked_list.dir/all
 all: CMakeFiles/stack.dir/all
+all: CMakeFiles/doubly_linked_list.dir/all
 all: CMakeFiles/tp9.dir/all
 all: tests/all
 .PHONY : all
@@ -72,6 +73,7 @@ all: tests/all
 # The main recursive "codegen" target.
 codegen: CMakeFiles/linked_list.dir/codegen
 codegen: CMakeFiles/stack.dir/codegen
+codegen: CMakeFiles/doubly_linked_list.dir/codegen
 codegen: CMakeFiles/tp9.dir/codegen
 codegen: tests/codegen
 .PHONY : codegen
@@ -83,6 +85,7 @@ preinstall: tests/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/linked_list.dir/clean
 clean: CMakeFiles/stack.dir/clean
+clean: CMakeFiles/doubly_linked_list.dir/clean
 clean: CMakeFiles/tp9.dir/clean
 clean: tests/clean
 .PHONY : clean
@@ -93,11 +96,13 @@ clean: tests/clean
 # Recursive "all" directory target.
 tests/all: tests/CMakeFiles/runTests.dir/all
 tests/all: tests/CMakeFiles/runStackTests.dir/all
+tests/all: tests/CMakeFiles/runDoublyListTests.dir/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
 tests/codegen: tests/CMakeFiles/runTests.dir/codegen
 tests/codegen: tests/CMakeFiles/runStackTests.dir/codegen
+tests/codegen: tests/CMakeFiles/runDoublyListTests.dir/codegen
 .PHONY : tests/codegen
 
 # Recursive "preinstall" directory target.
@@ -107,6 +112,7 @@ tests/preinstall:
 # Recursive "clean" directory target.
 tests/clean: tests/CMakeFiles/runTests.dir/clean
 tests/clean: tests/CMakeFiles/runStackTests.dir/clean
+tests/clean: tests/CMakeFiles/runDoublyListTests.dir/clean
 .PHONY : tests/clean
 
 #=============================================================================
@@ -116,7 +122,7 @@ tests/clean: tests/CMakeFiles/runStackTests.dir/clean
 CMakeFiles/linked_list.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=1,2 "Built target linked_list"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=3,4 "Built target linked_list"
 .PHONY : CMakeFiles/linked_list.dir/all
 
 # Build rule for subdir invocation for target.
@@ -133,7 +139,7 @@ linked_list: CMakeFiles/linked_list.dir/rule
 # codegen rule for target.
 CMakeFiles/linked_list.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=1,2 "Finished codegen for target linked_list"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=3,4 "Finished codegen for target linked_list"
 .PHONY : CMakeFiles/linked_list.dir/codegen
 
 # clean rule for target.
@@ -148,7 +154,7 @@ CMakeFiles/linked_list.dir/clean:
 CMakeFiles/stack.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=7,8 "Built target stack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=11,12 "Built target stack"
 .PHONY : CMakeFiles/stack.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +171,7 @@ stack: CMakeFiles/stack.dir/rule
 # codegen rule for target.
 CMakeFiles/stack.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stack.dir/build.make CMakeFiles/stack.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=7,8 "Finished codegen for target stack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=11,12 "Finished codegen for target stack"
 .PHONY : CMakeFiles/stack.dir/codegen
 
 # clean rule for target.
@@ -174,19 +180,52 @@ CMakeFiles/stack.dir/clean:
 .PHONY : CMakeFiles/stack.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/doubly_linked_list.dir
+
+# All Build rule for target.
+CMakeFiles/doubly_linked_list.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=1,2 "Built target doubly_linked_list"
+.PHONY : CMakeFiles/doubly_linked_list.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/doubly_linked_list.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/doubly_linked_list.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 0
+.PHONY : CMakeFiles/doubly_linked_list.dir/rule
+
+# Convenience name for target.
+doubly_linked_list: CMakeFiles/doubly_linked_list.dir/rule
+.PHONY : doubly_linked_list
+
+# codegen rule for target.
+CMakeFiles/doubly_linked_list.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=1,2 "Finished codegen for target doubly_linked_list"
+.PHONY : CMakeFiles/doubly_linked_list.dir/codegen
+
+# clean rule for target.
+CMakeFiles/doubly_linked_list.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/clean
+.PHONY : CMakeFiles/doubly_linked_list.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/tp9.dir
 
 # All Build rule for target.
 CMakeFiles/tp9.dir/all: CMakeFiles/linked_list.dir/all
 CMakeFiles/tp9.dir/all: CMakeFiles/stack.dir/all
+CMakeFiles/tp9.dir/all: CMakeFiles/doubly_linked_list.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp9.dir/build.make CMakeFiles/tp9.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp9.dir/build.make CMakeFiles/tp9.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=9,10 "Built target tp9"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=13,14 "Built target tp9"
 .PHONY : CMakeFiles/tp9.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tp9.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tp9.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 0
 .PHONY : CMakeFiles/tp9.dir/rule
@@ -198,7 +237,7 @@ tp9: CMakeFiles/tp9.dir/rule
 # codegen rule for target.
 CMakeFiles/tp9.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp9.dir/build.make CMakeFiles/tp9.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=9,10 "Finished codegen for target tp9"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=13,14 "Finished codegen for target tp9"
 .PHONY : CMakeFiles/tp9.dir/codegen
 
 # clean rule for target.
@@ -213,7 +252,7 @@ CMakeFiles/tp9.dir/clean:
 tests/CMakeFiles/runTests.dir/all: CMakeFiles/linked_list.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=5,6 "Built target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=9,10 "Built target runTests"
 .PHONY : tests/CMakeFiles/runTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -230,7 +269,7 @@ runTests: tests/CMakeFiles/runTests.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/runTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=5,6 "Finished codegen for target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=9,10 "Finished codegen for target runTests"
 .PHONY : tests/CMakeFiles/runTests.dir/codegen
 
 # clean rule for target.
@@ -245,7 +284,7 @@ tests/CMakeFiles/runTests.dir/clean:
 tests/CMakeFiles/runStackTests.dir/all: CMakeFiles/stack.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=3,4 "Built target runStackTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=7,8 "Built target runStackTests"
 .PHONY : tests/CMakeFiles/runStackTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -262,13 +301,45 @@ runStackTests: tests/CMakeFiles/runStackTests.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/runStackTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=3,4 "Finished codegen for target runStackTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=7,8 "Finished codegen for target runStackTests"
 .PHONY : tests/CMakeFiles/runStackTests.dir/codegen
 
 # clean rule for target.
 tests/CMakeFiles/runStackTests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/clean
 .PHONY : tests/CMakeFiles/runStackTests.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/runDoublyListTests.dir
+
+# All Build rule for target.
+tests/CMakeFiles/runDoublyListTests.dir/all: CMakeFiles/doubly_linked_list.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=5,6 "Built target runDoublyListTests"
+.PHONY : tests/CMakeFiles/runDoublyListTests.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/runDoublyListTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runDoublyListTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thekoder/TP9-DataStructures/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/runDoublyListTests.dir/rule
+
+# Convenience name for target.
+runDoublyListTests: tests/CMakeFiles/runDoublyListTests.dir/rule
+.PHONY : runDoublyListTests
+
+# codegen rule for target.
+tests/CMakeFiles/runDoublyListTests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thekoder/TP9-DataStructures/build/CMakeFiles --progress-num=5,6 "Finished codegen for target runDoublyListTests"
+.PHONY : tests/CMakeFiles/runDoublyListTests.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/runDoublyListTests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/clean
+.PHONY : tests/CMakeFiles/runDoublyListTests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

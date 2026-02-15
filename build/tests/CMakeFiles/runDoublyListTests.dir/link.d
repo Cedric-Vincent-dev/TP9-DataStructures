@@ -1,11 +1,11 @@
-tp9: \
+runDoublyListTests: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
-  CMakeFiles/tp9.dir/src/main.cpp.o \
-  liblinked_list.a \
-  libstack.a \
-  libdoubly_linked_list.a \
+  CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.o \
+  ../libdoubly_linked_list.a \
+  /usr/lib/x86_64-linux-gnu/libgtest_main.a \
+  /usr/lib/x86_64-linux-gnu/libgtest.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
@@ -32,9 +32,7 @@ tp9: \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o \
-  /lib/x86_64-linux-gnu/libm.so.6 \
-  /lib64/ld-linux-x86-64.so.2 \
-  /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1
+  /lib64/ld-linux-x86-64.so.2
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o:
 
@@ -42,13 +40,13 @@ tp9: \
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
-CMakeFiles/tp9.dir/src/main.cpp.o:
+CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.o:
 
-liblinked_list.a:
+../libdoubly_linked_list.a:
 
-libstack.a:
+/usr/lib/x86_64-linux-gnu/libgtest_main.a:
 
-libdoubly_linked_list.a:
+/usr/lib/x86_64-linux-gnu/libgtest.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so:
 
@@ -102,8 +100,4 @@ libdoubly_linked_list.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o:
 
-/lib/x86_64-linux-gnu/libm.so.6:
-
 /lib64/ld-linux-x86-64.so.2:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1:

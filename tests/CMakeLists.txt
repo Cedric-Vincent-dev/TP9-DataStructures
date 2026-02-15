@@ -22,3 +22,8 @@ add_test(NAME LinkedListTests COMMAND runTests)
 add_executable(runStackTests stack_test.cpp)
 target_link_libraries(runStackTests GTest::GTest GTest::Main stack)
 add_test(NAME StackTests COMMAND runStackTests)
+
+# Test pour la liste doublement chainée
+add_executable(runDoublyListTests doubly_linked_list_test.cpp)
+target_link_libraries(runDoublyListTests GTest::GTest GTest::Main doubly_linked_list)
+add_test(NAME DoublyLinkedListTests COMMAND runDoublyListTests)

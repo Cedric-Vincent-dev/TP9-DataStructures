@@ -154,6 +154,44 @@ runStackTests/fast:
 	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/build
 .PHONY : runStackTests/fast
 
+# Convenience name for target.
+tests/CMakeFiles/runDoublyListTests.dir/rule:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runDoublyListTests.dir/rule
+.PHONY : tests/CMakeFiles/runDoublyListTests.dir/rule
+
+# Convenience name for target.
+runDoublyListTests: tests/CMakeFiles/runDoublyListTests.dir/rule
+.PHONY : runDoublyListTests
+
+# fast build rule for target.
+runDoublyListTests/fast:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/build
+.PHONY : runDoublyListTests/fast
+
+doubly_linked_list_test.o: doubly_linked_list_test.cpp.o
+.PHONY : doubly_linked_list_test.o
+
+# target to build an object file
+doubly_linked_list_test.cpp.o:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.o
+.PHONY : doubly_linked_list_test.cpp.o
+
+doubly_linked_list_test.i: doubly_linked_list_test.cpp.i
+.PHONY : doubly_linked_list_test.i
+
+# target to preprocess a source file
+doubly_linked_list_test.cpp.i:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.i
+.PHONY : doubly_linked_list_test.cpp.i
+
+doubly_linked_list_test.s: doubly_linked_list_test.cpp.s
+.PHONY : doubly_linked_list_test.s
+
+# target to generate assembly for a file
+doubly_linked_list_test.cpp.s:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.s
+.PHONY : doubly_linked_list_test.cpp.s
+
 linked_list_test.o: linked_list_test.cpp.o
 .PHONY : linked_list_test.o
 
@@ -211,8 +249,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... runDoublyListTests"
 	@echo "... runStackTests"
 	@echo "... runTests"
+	@echo "... doubly_linked_list_test.o"
+	@echo "... doubly_linked_list_test.i"
+	@echo "... doubly_linked_list_test.s"
 	@echo "... linked_list_test.o"
 	@echo "... linked_list_test.i"
 	@echo "... linked_list_test.s"

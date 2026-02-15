@@ -153,6 +153,19 @@ stack/fast:
 .PHONY : stack/fast
 
 #=============================================================================
+# Target rules for targets named doubly_linked_list
+
+# Build rule for target.
+doubly_linked_list: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doubly_linked_list
+.PHONY : doubly_linked_list
+
+# fast build rule for target.
+doubly_linked_list/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/build
+.PHONY : doubly_linked_list/fast
+
+#=============================================================================
 # Target rules for targets named tp9
 
 # Build rule for target.
@@ -190,6 +203,43 @@ runStackTests: cmake_check_build_system
 runStackTests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runStackTests.dir/build.make tests/CMakeFiles/runStackTests.dir/build
 .PHONY : runStackTests/fast
+
+#=============================================================================
+# Target rules for targets named runDoublyListTests
+
+# Build rule for target.
+runDoublyListTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runDoublyListTests
+.PHONY : runDoublyListTests
+
+# fast build rule for target.
+runDoublyListTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/build
+.PHONY : runDoublyListTests/fast
+
+src/doubly_linked_list.o: src/doubly_linked_list.c.o
+.PHONY : src/doubly_linked_list.o
+
+# target to build an object file
+src/doubly_linked_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/src/doubly_linked_list.c.o
+.PHONY : src/doubly_linked_list.c.o
+
+src/doubly_linked_list.i: src/doubly_linked_list.c.i
+.PHONY : src/doubly_linked_list.i
+
+# target to preprocess a source file
+src/doubly_linked_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/src/doubly_linked_list.c.i
+.PHONY : src/doubly_linked_list.c.i
+
+src/doubly_linked_list.s: src/doubly_linked_list.c.s
+.PHONY : src/doubly_linked_list.s
+
+# target to generate assembly for a file
+src/doubly_linked_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/src/doubly_linked_list.c.s
+.PHONY : src/doubly_linked_list.c.s
 
 src/linked_list.o: src/linked_list.c.o
 .PHONY : src/linked_list.o
@@ -272,11 +322,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... doubly_linked_list"
 	@echo "... linked_list"
+	@echo "... runDoublyListTests"
 	@echo "... runStackTests"
 	@echo "... runTests"
 	@echo "... stack"
 	@echo "... tp9"
+	@echo "... src/doubly_linked_list.o"
+	@echo "... src/doubly_linked_list.i"
+	@echo "... src/doubly_linked_list.s"
 	@echo "... src/linked_list.o"
 	@echo "... src/linked_list.i"
 	@echo "... src/linked_list.s"

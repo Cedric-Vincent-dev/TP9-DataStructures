@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/tp9.dir/link.d CMakeFiles/tp9.dir/src/main.cpp.o -o tp9  liblinked_list.a libstack.a
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/tp9.dir/link.d CMakeFiles/tp9.dir/src/main.cpp.o -o tp9  liblinked_list.a libstack.a libdoubly_linked_list.a
