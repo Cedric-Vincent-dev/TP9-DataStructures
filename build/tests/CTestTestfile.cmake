@@ -10,3 +10,5 @@ add_test(StackTests "/home/thekoder/TP9-DataStructures/build/tests/runStackTests
 set_tests_properties(StackTests PROPERTIES  _BACKTRACE_TRIPLES "/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;24;add_test;/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;0;")
 add_test(DoublyLinkedListTests "/home/thekoder/TP9-DataStructures/build/tests/runDoublyListTests")
 set_tests_properties(DoublyLinkedListTests PROPERTIES  _BACKTRACE_TRIPLES "/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;29;add_test;/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;0;")
+add_test(HeapTests "/home/thekoder/TP9-DataStructures/build/tests/runHeapTests")
+set_tests_properties(HeapTests PROPERTIES  _BACKTRACE_TRIPLES "/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;34;add_test;/home/thekoder/TP9-DataStructures/tests/CMakeLists.txt;0;")

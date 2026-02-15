@@ -1,4 +1,5 @@
-LinkedListTests 1 0.0108263
-StackTests 1 0.0142356
-DoublyLinkedListTests 1 0.0104156
+LinkedListTests 1 0.00725198
+StackTests 1 0.00615536
+DoublyLinkedListTests 1 0.00694283
+HeapTests 1 0.00750252
 ---

@@ -168,6 +168,20 @@ runDoublyListTests/fast:
 	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/build
 .PHONY : runDoublyListTests/fast
 
+# Convenience name for target.
+tests/CMakeFiles/runHeapTests.dir/rule:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runHeapTests.dir/rule
+.PHONY : tests/CMakeFiles/runHeapTests.dir/rule
+
+# Convenience name for target.
+runHeapTests: tests/CMakeFiles/runHeapTests.dir/rule
+.PHONY : runHeapTests
+
+# fast build rule for target.
+runHeapTests/fast:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runHeapTests.dir/build.make tests/CMakeFiles/runHeapTests.dir/build
+.PHONY : runHeapTests/fast
+
 doubly_linked_list_test.o: doubly_linked_list_test.cpp.o
 .PHONY : doubly_linked_list_test.o
 
@@ -191,6 +205,30 @@ doubly_linked_list_test.s: doubly_linked_list_test.cpp.s
 doubly_linked_list_test.cpp.s:
 	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/doubly_linked_list_test.cpp.s
 .PHONY : doubly_linked_list_test.cpp.s
+
+heap_test.o: heap_test.cpp.o
+.PHONY : heap_test.o
+
+# target to build an object file
+heap_test.cpp.o:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runHeapTests.dir/build.make tests/CMakeFiles/runHeapTests.dir/heap_test.cpp.o
+.PHONY : heap_test.cpp.o
+
+heap_test.i: heap_test.cpp.i
+.PHONY : heap_test.i
+
+# target to preprocess a source file
+heap_test.cpp.i:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runHeapTests.dir/build.make tests/CMakeFiles/runHeapTests.dir/heap_test.cpp.i
+.PHONY : heap_test.cpp.i
+
+heap_test.s: heap_test.cpp.s
+.PHONY : heap_test.s
+
+# target to generate assembly for a file
+heap_test.cpp.s:
+	cd /home/thekoder/TP9-DataStructures/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runHeapTests.dir/build.make tests/CMakeFiles/runHeapTests.dir/heap_test.cpp.s
+.PHONY : heap_test.cpp.s
 
 linked_list_test.o: linked_list_test.cpp.o
 .PHONY : linked_list_test.o
@@ -250,11 +288,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... runDoublyListTests"
+	@echo "... runHeapTests"
 	@echo "... runStackTests"
 	@echo "... runTests"
 	@echo "... doubly_linked_list_test.o"
 	@echo "... doubly_linked_list_test.i"
 	@echo "... doubly_linked_list_test.s"
+	@echo "... heap_test.o"
+	@echo "... heap_test.i"
+	@echo "... heap_test.s"
 	@echo "... linked_list_test.o"
 	@echo "... linked_list_test.i"
 	@echo "... linked_list_test.s"

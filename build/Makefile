@@ -166,6 +166,19 @@ doubly_linked_list/fast:
 .PHONY : doubly_linked_list/fast
 
 #=============================================================================
+# Target rules for targets named heap
+
+# Build rule for target.
+heap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heap
+.PHONY : heap
+
+# fast build rule for target.
+heap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/build
+.PHONY : heap/fast
+
+#=============================================================================
 # Target rules for targets named tp9
 
 # Build rule for target.
@@ -217,6 +230,19 @@ runDoublyListTests/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runDoublyListTests.dir/build.make tests/CMakeFiles/runDoublyListTests.dir/build
 .PHONY : runDoublyListTests/fast
 
+#=============================================================================
+# Target rules for targets named runHeapTests
+
+# Build rule for target.
+runHeapTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runHeapTests
+.PHONY : runHeapTests
+
+# fast build rule for target.
+runHeapTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runHeapTests.dir/build.make tests/CMakeFiles/runHeapTests.dir/build
+.PHONY : runHeapTests/fast
+
 src/doubly_linked_list.o: src/doubly_linked_list.c.o
 .PHONY : src/doubly_linked_list.o
 
@@ -240,6 +266,30 @@ src/doubly_linked_list.s: src/doubly_linked_list.c.s
 src/doubly_linked_list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doubly_linked_list.dir/build.make CMakeFiles/doubly_linked_list.dir/src/doubly_linked_list.c.s
 .PHONY : src/doubly_linked_list.c.s
+
+src/heap.o: src/heap.c.o
+.PHONY : src/heap.o
+
+# target to build an object file
+src/heap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.c.o
+.PHONY : src/heap.c.o
+
+src/heap.i: src/heap.c.i
+.PHONY : src/heap.i
+
+# target to preprocess a source file
+src/heap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.c.i
+.PHONY : src/heap.c.i
+
+src/heap.s: src/heap.c.s
+.PHONY : src/heap.s
+
+# target to generate assembly for a file
+src/heap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.c.s
+.PHONY : src/heap.c.s
 
 src/linked_list.o: src/linked_list.c.o
 .PHONY : src/linked_list.o
@@ -323,8 +373,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... doubly_linked_list"
+	@echo "... heap"
 	@echo "... linked_list"
 	@echo "... runDoublyListTests"
+	@echo "... runHeapTests"
 	@echo "... runStackTests"
 	@echo "... runTests"
 	@echo "... stack"
@@ -332,6 +384,9 @@ help:
 	@echo "... src/doubly_linked_list.o"
 	@echo "... src/doubly_linked_list.i"
 	@echo "... src/doubly_linked_list.s"
+	@echo "... src/heap.o"
+	@echo "... src/heap.i"
+	@echo "... src/heap.s"
 	@echo "... src/linked_list.o"
 	@echo "... src/linked_list.i"
 	@echo "... src/linked_list.s"

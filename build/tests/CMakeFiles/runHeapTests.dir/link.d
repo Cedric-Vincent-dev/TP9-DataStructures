@@ -1,12 +1,11 @@
-tp9: \
+runHeapTests: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
-  CMakeFiles/tp9.dir/src/main.cpp.o \
-  liblinked_list.a \
-  libstack.a \
-  libdoubly_linked_list.a \
-  libheap.a \
+  CMakeFiles/runHeapTests.dir/heap_test.cpp.o \
+  ../libheap.a \
+  /usr/lib/x86_64-linux-gnu/libgtest_main.a \
+  /usr/lib/x86_64-linux-gnu/libgtest.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
@@ -33,9 +32,7 @@ tp9: \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o \
-  /lib/x86_64-linux-gnu/libm.so.6 \
-  /lib64/ld-linux-x86-64.so.2 \
-  /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1
+  /lib64/ld-linux-x86-64.so.2
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o:
 
@@ -43,15 +40,13 @@ tp9: \
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
-CMakeFiles/tp9.dir/src/main.cpp.o:
+CMakeFiles/runHeapTests.dir/heap_test.cpp.o:
 
-liblinked_list.a:
+../libheap.a:
 
-libstack.a:
+/usr/lib/x86_64-linux-gnu/libgtest_main.a:
 
-libdoubly_linked_list.a:
-
-libheap.a:
+/usr/lib/x86_64-linux-gnu/libgtest.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so:
 
@@ -105,8 +100,4 @@ libheap.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o:
 
-/lib/x86_64-linux-gnu/libm.so.6:
-
 /lib64/ld-linux-x86-64.so.2:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1:
