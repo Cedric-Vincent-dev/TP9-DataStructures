@@ -1,0 +1,10 @@
+# Ignorer le dossier de build généré par CMake
+/build/
+
+# Ignorer les fichiers objet et librairies compilées
+*.o
+*.a
+*.out
+
+# Ignorer les fichiers temporaires créer par les éditeurs
+*~
