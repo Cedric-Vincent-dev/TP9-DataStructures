@@ -105,6 +105,93 @@ Chaque structure a été validée par des tests unitaires utilisant **Google Tes
 
 Tous les tests ont passé avec succès (`ctest` : 100% OK).
 
+**Autres structures des données:**
+
+**7. File (Queue)**
+- **Définition** : Structure FIFO (First In, First Out).  
+- **Cas d’utilisation** : Gestion des tâches, files d’attente, buffers.  
+- **Pseudo‑algorithme (Enqueue)** :
+  ```
+  function enqueue(queue, value):
+      queue.rear ← queue.rear + 1
+      queue.data[queue.rear] ← value
+  ```
+
+
+
+**8. Table de Hachage (Hash Table)**
+- **Définition** : Variante optimisée de la Map, utilisant une fonction de hachage pour indexer directement les clés.  
+- **Cas d’utilisation** : Recherche ultra‑rapide, gestion de dictionnaires volumineux.  
+- **Pseudo‑algorithme (Recherche)** :
+  ```
+  function search(table, key):
+      index ← hash(key) mod capacity
+      return table[index]
+  ```
+
+
+
+**9. Graphe (Graph)**
+- **Définition** : Ensemble de sommets reliés par des arêtes, orientées ou non.  
+- **Cas d’utilisation** : Réseaux sociaux, chemins, topologie réseau.  
+- **Pseudo‑algorithme (Parcours BFS)** :
+  ```
+  function BFS(graph, start):
+      queue ← empty
+      enqueue(queue, start)
+      while queue not empty:
+          node ← dequeue(queue)
+          for each neighbor in graph[node]:
+              if not visited(neighbor):
+                  mark visited
+                  enqueue(queue, neighbor)
+  ```
+
+
+
+**10. Tableau Dynamique (Dynamic Array)**
+- **Définition** : Tableau dont la taille peut croître automatiquement.  
+- **Cas d’utilisation** : Stockage flexible, vecteurs dynamiques.  
+- **Pseudo‑algorithme (Insertion)** :
+  ```
+  function insert(array, value):
+      if array.size = array.capacity:
+          resize(array)
+      array.data[array.size] ← value
+      array.size ← array.size + 1
+  ```
+
+
+
+**11. Arbre AVL**
+- **Définition** : Arbre binaire de recherche auto‑équilibré, garantissant une hauteur logarithmique.  
+- **Cas d’utilisation** : Recherche rapide avec équilibrage automatique.  
+- **Pseudo‑algorithme (Rotation droite)** :
+  ```
+  function rotateRight(node):
+      left ← node.left
+      node.left ← left.right
+      left.right ← node
+      return left
+  ```
+
+
+
+**12. Trie (Arbre Préfixe)**
+- **Définition** : Arbre spécialisé pour stocker des chaînes de caractères, chaque chemin correspond à un préfixe.  
+- **Cas d’utilisation** : Recherche de mots, autocomplétion, dictionnaires.  
+- **Pseudo‑algorithme (Insertion d’un mot)** :
+  ```
+  function insert(trie, word):
+      node ← trie.root
+      for each char in word:
+          if char not in node.children:
+              node.children[char] ← new Node()
+          node ← node.children[char]
+      node.isEnd ← true
+  ```
+
+
 
 
 **4. Conclusion**
