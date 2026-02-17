@@ -20,6 +20,8 @@ typedef struct LinkedList {
 void init_list(LinkedList* list);
 void insert(LinkedList* list, int value);
 void clear_list(LinkedList* list);
+void delete_node(LinkedList* list, int value);
+void print_list(LinkedList* list);
 
 #ifdef __cplusplus
 }

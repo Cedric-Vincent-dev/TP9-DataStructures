@@ -4,13 +4,24 @@
 int main(){
 
   LinkedList list;
-  init_list(&list);
-  insert(&list, 42);
-  std::cout << "First element: " << list.head->value << std::endl;
-  clear_list(&list);
+    init_list(&list);
 
-  return 0;
+    insert(&list, 10);
+    insert(&list, 20);
+    insert(&list, 30);
 
+    std::cout << "Liste après insertions: ";
+    print_list(&list);
+
+    delete_node(&list, 20);
+
+    std::cout << "Liste après suppression de 20: ";
+    print_list(&list);
+
+    clear_list(&list);
+    
+    return 0;
 }
+
 
 
